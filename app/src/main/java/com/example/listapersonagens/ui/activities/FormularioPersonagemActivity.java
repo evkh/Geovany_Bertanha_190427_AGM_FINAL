@@ -59,18 +59,18 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
     }
 
     @Override
-    //faz o processo de inicialização
+    //inicialização
     protected void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //pegando item pelo id
         setContentView(R.layout.activity_formulario_personagem);
-        //ordem da execução dos eventos no Oncreate
+        //execução dos eventos no Oncreate
         inicializaCampos();
         configuraoBotaoSalvar();
         carregaPersonagem();
     }
 
-    //carrega o personagem para fazer o edit / criar
+    //carrega o personagem
     private void carregaPersonagem() {
         Intent dados = getIntent();
         if (dados.hasExtra(CHAVE_PERSONAGEM)) {
@@ -120,7 +120,7 @@ public class FormularioPersonagemActivity extends AppCompatActivity {
 
     //Pegando os ids do editText e inicializando, configura o layout
     private void inicializaCampos() {
-        //pegando itens pelo id que estão no xml
+        //pegando itens pelo id
         campoNome = findViewById(R.id.editText_nome);
         campoAltura = findViewById(R.id.editText_altura);
         campoNascimento = findViewById(R.id.editText_nascimento);

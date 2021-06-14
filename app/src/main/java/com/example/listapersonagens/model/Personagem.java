@@ -21,7 +21,7 @@ public class Personagem implements Serializable {
                       String rg, String genero) {
 
 
-        //adcionando conteudo nas variaveis
+        //adcionando conteudo as variaveis
         this.nome = nome;
         this.altura = altura;
         this.nascimento = nascimento;

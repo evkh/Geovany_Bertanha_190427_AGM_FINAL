@@ -33,7 +33,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
     protected void onCreate(@NonNull Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_personagem);
-        //Definindo o titulo
+        //Define o titulo
         setTitle(TITULO_APPBAR);
         configuraFabNovoPersonagem();
         configuraLista();
@@ -41,11 +41,11 @@ public class ListaPersonagemActivity extends AppCompatActivity {
     }
 
     private void configuraFabNovoPersonagem() {
-        //Puxando o FloatingActionButton
+        //Puxa o FloatingActionButton
         FloatingActionButton botaoNovoPersonagem = findViewById(R.id.floatingActionButton2);
         botaoNovoPersonagem.setOnClickListener(new View.OnClickListener() {
             @Override
-            //Ao clicar no botão executa o abreFormularioSalva()
+            //Ao clicar executa o abreFormularioSalva()
             public void onClick(View view) {
                 abreFormularioSalva();
 
@@ -58,7 +58,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
         startActivity(new Intent(ListaPersonagemActivity.this, FormularioPersonagemActivity.class));
     }
 
-    //protege os dados para não sumir ao dar back
+    //protege os dados para não serem apagados
     @Override
     protected void onResume() {
         super.onResume();
@@ -122,7 +122,7 @@ public class ListaPersonagemActivity extends AppCompatActivity {
 
     private void configuraItemPorClique(ListView listadePersonagens) {
         listadePersonagens.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            //Metodo que faz a selecao dos personagens
+            //Metodo da selecao dos personagens
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int posicao, long id) {
                 Personagem personagemEscolhido = (Personagem) adapterView.getItemAtPosition(posicao);
